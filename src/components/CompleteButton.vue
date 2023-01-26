@@ -4,6 +4,7 @@
 
 <script lang="ts">
 import { defineComponent, SetupContext } from "vue";
+import { useStore } from "vuex";
 
 export default defineComponent({
   name: "CompleteButton",
@@ -14,8 +15,10 @@ export default defineComponent({
   },
 
   setup(props, context: SetupContext){
+    const store = useStore()
     const completed = (e) =>{
-      context.emit('complete-todo', props.index);
+      const targetIndex = props.index
+      store.commit('complete', targetIndex)
     };
 
     return { completed, props }

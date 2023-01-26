@@ -1,15 +1,11 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <TodoList />
+  <router-view />
 </template>
 
 <script>
-import TodoList from "./components/TodoList.vue";
-
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   name: 'App',
-  components: {
-    TodoList,
-  }
-}
+
+})
 </script>
