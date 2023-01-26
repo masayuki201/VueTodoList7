@@ -10,17 +10,17 @@ export const store = createStore<State>({
             {
                 id: 0,
                 todo: 'クリーニングへ行く',
-                comment: ['8時に行く'],
+                comment: '8時に行く',
             },
             {
                 id: 1,
                 todo: 'スーパーへ行く',
-                comment: ['9時に行く'],
+                comment: '9時に行く',
             },
             {
                 id: 2,
                 todo: '銀行へ行く',
-                comment: ['10時に行く'],
+                comment: '10時に行く',
             },
         ]
     },
