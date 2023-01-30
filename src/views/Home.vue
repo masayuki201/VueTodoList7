@@ -1,7 +1,7 @@
 <template>
   <div>
-    <TodoList />
     <TodoInput />
+    <TodoList />
   </div>
 </template>
 
