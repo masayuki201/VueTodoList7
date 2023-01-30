@@ -4,15 +4,17 @@
       <div>
         <h2>
           <p>タイトル</p>
-          <p>{{ detailItem.todo }}</p>
+          <input type="text" v-model="detailItem.todo" placeholder="タイトル">
         </h2>
       </div>
       <div>
         <h2>
           <p>コメント</p>
-          <p>{{ detailItem.comment }}</p>
+          <textarea v-model="detailItem.comment" placeholder="コメント"></textarea>
         </h2>
       </div>
+      <router-link to="/">一覧へ</router-link>
+
     </template>
     <template v-else>
       <div>
