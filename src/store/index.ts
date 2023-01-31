@@ -1,11 +1,13 @@
 import { createStore } from "vuex";
 
 export interface State {
-    todoList: Array<{ id: number, todo: string }>
+    keyword: string,
+    todoList: Array<{ id: number, todo: string, comment: string }>,
 }
 
 export const store = createStore<State>({
     state: {
+        keyword: '',
         todoList: [
             {
                 id: 0,
@@ -22,15 +24,19 @@ export const store = createStore<State>({
                 todo: '銀行へ行く',
                 comment: '10時に行く',
             },
-        ]
+        ],
     },
     mutations: {
         increment(state, { id, value }) {
-            state.todoList.push({ id: id, todo: value, comment: []})
+            state.todoList.push({ id: id, todo: value, comment: ''})
         },
         complete(state, targetIndex) {
             state.todoList.splice(targetIndex, 1)
         },
+        search(state, value){
+            const searchKeyword = state.keyword;
+            store.state.todoList.filter((todo) => todo.todo.includes(searchKeyword));
+        }
     },
     actions: {},
     modules: {},
