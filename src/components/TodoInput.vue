@@ -23,6 +23,10 @@ export default defineComponent({
     }
 
     const add = (e) =>{
+      if (!todoRef.value) {
+            alert('文字を入力して下さい')
+            return
+          }
       const id = lastId()
       const value = todoRef.value
       store.commit('increment', {id, value})
