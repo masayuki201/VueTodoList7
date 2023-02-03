@@ -1,7 +1,7 @@
 <template>
  <div>
    <ul class="todolist">
-     <li v-for="(todo, index) in state.todoList" :key="todo.todo">
+     <li v-for="(todo, index) in filteredLists" :key="todo.todo">
        {{ todo.todo }}
        <router-link :to="{name: 'detail', params: {id: todo.id}}">詳細</router-link>
        <CompleteButton :index="index" />

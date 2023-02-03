@@ -13,12 +13,13 @@ import { useStore } from "vuex";
 export default defineComponent({
   name: "TodoSearch",
   setup(){
+    // const store = useStore()
     const keyword = ref<string>('')
 
     const filteredLists = computed(() => {
       const searchKeyword = store.state.keyword;
       if (searchKeyword === '') return store.state.todoList;
-      return store.commit('search', searchKeyword)
+      store.commit('search', searchKeyword)
     });
 
     return { keyword, filteredLists };
