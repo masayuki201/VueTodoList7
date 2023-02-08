@@ -33,8 +33,16 @@ export const store = createStore<State>({
         complete(state, targetIndex) {
             state.todoList.splice(targetIndex, 1)
         },
-        search(state, searchKeyword){
-            state.todoList.filter((todo) => todo.todo.includes(searchKeyword));
+        search(state, searchKeyword ){
+            console.log('search')
+            console.log(state.todoList.todo<{todo:string}>)
+            console.log(searchKeyword)
+
+            console.log(state.todoList.includes(searchKeyword))
+
+            state.todoList.filter(todo => todo.todo.includes(searchKeyword));
+
+            console.log('end')
         }
     },
     actions: {},

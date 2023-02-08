@@ -1,7 +1,8 @@
 <template>
  <div>
+   <TodoSearch />
    <ul class="todolist">
-     <li v-for="(todo, index) in filteredLists" :key="todo.todo">
+     <li v-for="(todo, index) in state.todoList" :key="todo.todo">
        {{ todo.todo }}
        <router-link :to="{name: 'detail', params: {id: todo.id}}">詳細</router-link>
        <CompleteButton :index="index" />
@@ -13,12 +14,14 @@
 <script lang="ts">
 import { defineComponent, reactive } from "vue";
 import { useStore } from "vuex";
+import TodoSearch from '../components/TodoSearch.vue';
 import CompleteButton from '../components/CompleteButton.vue';
 
 export default defineComponent({
   name: "TodoList",
   components: {
     CompleteButton,
+    TodoSearch,
   },
 
   setup() {

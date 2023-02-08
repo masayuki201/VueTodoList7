@@ -5,20 +5,28 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from "vue";
+import {defineComponent, ref, computed, SetupContext} from "vue";
 import store from "../store";
 import { useStore } from "vuex";
 
 
 export default defineComponent({
   name: "TodoSearch",
-  setup(){
+  setup( context: SetupContext ){
     // const store = useStore()
     const keyword = ref<string>('')
+    console.log(keyword.value);
 
     const filteredLists = computed(() => {
-      const searchKeyword = store.state.keyword;
+      const searchKeyword = keyword.value;
+
+      console.log('なか');
+      console.log(searchKeyword);
+
       if (searchKeyword === '') return store.state.todoList;
+
+      console.log(filteredLists);
+
       store.commit('search', searchKeyword)
     });
 
