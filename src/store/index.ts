@@ -35,12 +35,12 @@ export const store = createStore<State>({
         },
         search(state, searchKeyword ){
             console.log('search')
-            console.log(state.todoList.todo<{todo:string}>)
+            console.log(state.todoList.value)
             console.log(searchKeyword)
 
             console.log(state.todoList.includes(searchKeyword))
 
-            state.todoList.filter(todo => todo.todo.includes(searchKeyword));
+            state.todoList.filter((todo) => todo.todo.includes(searchKeyword));
 
             console.log('end')
         }
