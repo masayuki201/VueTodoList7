@@ -33,17 +33,17 @@ export const store = createStore<State>({
         complete(state, targetIndex) {
             state.todoList.splice(targetIndex, 1)
         },
-        search(state, searchKeyword ){
-    console.log('searchの中')
-    console.log(state.todoList)
-    console.log(searchKeyword)
-
-    console.log(state.todoList.todo:{todo:string}.includes(searchKeyword))
-
-            state.todoList.filter((todo:{todo:string}) => todo.todo.includes(searchKeyword));
-
-    console.log('end')
-        }
+    //     search(state, searchKeyword ){
+    // console.log('searchの中')
+    // console.log(state.todoList)
+    // console.log(searchKeyword)
+    //
+    // console.log(state.todoList.todo.includes(searchKeyword))
+    //
+    //         state.todoList.filter((todo:{todo:string}) => todo.todo.includes(searchKeyword));
+    //
+    // console.log('end')
+    //     }
     },
     actions: {},
     modules: {},
