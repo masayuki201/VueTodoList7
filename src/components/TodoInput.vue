@@ -38,12 +38,6 @@ export default defineComponent({
 });
 </script>
 
-<style>
-.inputText{
-  @apply border rounded border-gray-300　box-border h-8 w-64;
-}
+<style scoped>
 
-.inputButton{
-  @apply rounded bg-yellow-500 text-white m-5 p-1;
-}
 </style>

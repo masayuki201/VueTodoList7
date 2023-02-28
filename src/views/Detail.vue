@@ -49,8 +49,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.inputComment{
-  @apply border rounded border-gray-300 h-64 w-64;
-}
 
 </style>

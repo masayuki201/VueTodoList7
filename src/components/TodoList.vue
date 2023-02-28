@@ -33,16 +33,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.listTodo{
-  @apply font-bold text-left;
-}
-
-.detailButton{
-  @apply absolute top-0 right-14 flex items-center space-x-1 rounded bg-blue-500 text-white p-1;
-}
-
-.completeButton{
-  @apply absolute top-0 right-0 flex items-center space-x-1 rounded bg-pink-500 text-white p-1;
-}
 
 </style>
