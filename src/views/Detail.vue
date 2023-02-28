@@ -3,17 +3,17 @@
     <template v-if="detailItem">
       <div>
         <h2>
-          <p>タイトル</p>
-          <input type="text" v-model="detailItem.todo" placeholder="タイトル">
+          <p class="font-bold m-5">タイトル</p>
+          <input class="inputText" type="text" v-model="detailItem.todo" placeholder="タイトル">
         </h2>
       </div>
       <div>
         <h2>
-          <p>コメント</p>
-          <textarea v-model="detailItem.comment" placeholder="コメント"></textarea>
+          <p class="font-bold m-5">コメント</p>
+          <textarea class="inputComment" v-model="detailItem.comment" placeholder="コメント"></textarea>
         </h2>
       </div>
-      <router-link to="/">一覧へ</router-link>
+      <router-link class="rounded bg-yellow-500 text-white m-5 p-1" to="/">一覧へ</router-link>
 
     </template>
     <template v-else>
@@ -49,5 +49,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.inputComment{
+  @apply border rounded border-gray-300 h-64 w-64;
+}
 
 </style>
