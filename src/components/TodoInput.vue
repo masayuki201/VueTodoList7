@@ -1,6 +1,6 @@
 <template>
-  <input v-model="todoRef" type="text">
-  <button @click="add">登録</button>
+  <input v-model="todoRef" type="text" class="inputText">
+  <button @click="add" class="inputButton">登録</button>
 </template>
 
 <script lang="ts">
@@ -38,6 +38,12 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style>
+.inputText{
+  @apply border rounded border-gray-300　box-border h-8 w-64;
+}
 
+.inputButton{
+  @apply rounded bg-yellow-500 text-white m-5 p-1;
+}
 </style>
