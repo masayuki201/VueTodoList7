@@ -10,3 +10,30 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+.headerTitle{
+  @apply h-24 p-3 flex items-center bg-yellow-500 text-white text-4xl font-bold;
+}
+
+.inputText{
+  @apply border rounded border-gray-300　box-border h-8 w-64;
+}
+
+.inputButton{
+  @apply rounded bg-yellow-500 text-white m-5 p-1;
+}
+
+.listTodo{
+  @apply font-bold text-left;
+}
+
+.detailButton{
+  @apply absolute top-0 right-14 flex items-center space-x-1 rounded bg-blue-500 text-white p-1;
+}
+
+.completeButton{
+  @apply absolute top-0 right-0 flex items-center space-x-1 rounded bg-pink-500 text-white p-1;
+}
+
+.inputComment{
+  @apply border rounded border-gray-300 h-64 w-64;
+}

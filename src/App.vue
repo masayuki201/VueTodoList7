@@ -17,8 +17,6 @@ export default defineComponent({
 })
 </script>
 
-<style>
-.headerTitle{
-  @apply h-24 p-3 flex items-center bg-yellow-500 text-white text-4xl font-bold;
-}
+<style scoped>
+
 </style>
